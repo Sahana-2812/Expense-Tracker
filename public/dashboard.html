@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+<title>
+Expense Tracker
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<script>
+
+if(
+  localStorage.getItem("loggedIn")
+  !== "true"
+){
+
+  window.location.href =
+  "index.html";
+
+}
+
+</script>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h1>
+Expense Tracker
+</h1>
+
+<a href="#dashboardSection">
+Dashboard
+</a>
+
+<a href="#uploadSection">
+Upload Statement
+</a>
+
+<a href="#transactionSection">
+Transactions
+</a>
+
+<a href="#analyticsSection">
+Analytics
+</a>
+
+<a href="#" onclick="logout()">
+Logout
+</a>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<h1 class="title">
+Expense Dashboard
+</h1>
+
+<!-- UPLOAD -->
+
+<div
+class="card"
+id="uploadSection"
+>
+
+<h2>
+Upload Annual Bank Statement
+</h2>
+
+<input
+type="file"
+id="pdfFile"
+accept=".pdf">
+
+<button onclick="uploadPDF()">
+
+Upload Statement PDF
+
+</button>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div
+class="summary"
+id="dashboardSection"
+>
+
+<div class="box">
+
+<h3>Total Income</h3>
+
+<h1 id="totalIncome">
+₹0
+</h1>
+
+</div>
+
+<div class="box">
+
+<h3>Total Expense</h3>
+
+<h1 id="totalExpense">
+₹0
+</h1>
+
+</div>
+
+<div class="box">
+
+<h3>Balance</h3>
+
+<h1 id="balance">
+₹0
+</h1>
+
+</div>
+
+</div>
+
+<!-- CHARTS -->
+
+<div
+class="charts"
+id="analyticsSection"
+>
+
+<div class="chart-card">
+
+<h2>
+Expense Distribution
+</h2>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>
+Monthly Analytics
+</h2>
+
+<canvas id="monthlyChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- INSIGHTS -->
+
+<div class="card">
+
+<h2>
+Smart Insights
+</h2>
+
+<div id="insights">
+
+No insights available.
+
+</div>
+
+</div>
+
+<!-- TRANSACTIONS -->
+
+<div
+class="card"
+id="transactionSection"
+>
+
+<h2>
+Transactions
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Category</th>
+<th>Amount</th>
+<th>Type</th>
+<th>Month</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="transactionTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

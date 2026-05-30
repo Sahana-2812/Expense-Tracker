@@ -1,0 +1,853 @@
+/* =========================
+GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+BODY
+========================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#edf1f7;
+    display:flex;
+
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+.sidebar{
+
+    width:260px;
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    180deg,
+    #081028,
+    #1a2747
+    );
+
+    padding:30px 20px;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+}
+
+.sidebar h1{
+
+    font-size:42px;
+    line-height:1.1;
+
+    margin-bottom:50px;
+
+    font-weight:800;
+
+    background:
+    linear-gradient(
+    90deg,
+    #a855f7,
+    #c084fc,
+    #e9d5ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+    height:70px;
+
+    margin-bottom:18px;
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:600;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    transition:0.3s;
+
+}
+
+.sidebar a:hover{
+
+    transform:translateY(-3px);
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+    );
+
+    box-shadow:
+    0 10px 20px rgba(147,51,234,0.35);
+
+}
+
+.sidebar a:active{
+
+    transform:scale(0.96);
+
+}
+
+/* =========================
+MAIN
+========================= */
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:30px;
+
+}
+
+.title{
+
+    font-size:54px;
+    font-weight:800;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+
+}
+
+/* =========================
+CARD
+========================= */
+
+.card{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.card h2{
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+    color:#0f172a;
+
+}
+
+/* =========================
+FILE INPUT
+========================= */
+
+input[type="file"]{
+
+    width:100%;
+
+    background:#f3f4f6;
+
+    border:none;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    font-size:17px;
+
+    margin-bottom:25px;
+
+}
+
+/* =========================
+BUTTON
+========================= */
+
+button{
+
+    width:100%;
+    height:72px;
+
+    border:none;
+
+    border-radius:24px;
+
+    font-size:20px;
+    font-weight:700;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+    );
+
+    transition:0.3s;
+
+    box-shadow:
+    0 10px 25px rgba(147,51,234,0.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+SUMMARY CARDS
+========================= */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+}
+
+.box{
+
+    background:
+    linear-gradient(
+    135deg,
+    #081028,
+    #172554
+    );
+
+    border-radius:35px;
+
+    padding:35px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:white;
+
+    min-height:220px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.18);
+
+}
+
+.box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    rgba(168,85,247,0.22);
+
+    right:-40px;
+    top:-40px;
+
+}
+
+.box h3{
+
+    font-size:22px;
+
+    color:#d1d5db;
+
+    margin-bottom:35px;
+
+}
+
+.box h1{
+
+    font-size:72px;
+    font-weight:800;
+
+}
+
+/* =========================
+CHART SECTION
+========================= */
+
+.charts{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+}
+
+.chart-card{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    min-height:540px;
+
+}
+
+.chart-card h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    color:#0f172a;
+
+}
+
+.chart-card canvas{
+
+    width:100% !important;
+
+    height:420px !important;
+
+}
+
+/* =========================
+INSIGHTS
+========================= */
+
+#insights{
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#111827;
+
+}
+
+#insights h3{
+
+    font-size:38px;
+
+    color:#7c3aed;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    text-align:left;
+
+    padding:20px;
+
+    font-size:20px;
+
+    color:#111827;
+
+    border-bottom:2px solid #e5e7eb;
+
+}
+
+td{
+
+    padding:20px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    font-size:18px;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    width:auto;
+
+    height:auto;
+
+    font-size:15px;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .charts{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        min-height:auto;
+
+    }
+
+    .main{
+
+        margin-left:0;
+
+        width:100%;
+
+    }
+
+    body{
+
+        flex-direction:column;
+
+    }
+
+}
+/* =========================
+HOVER ANIMATIONS
+========================= */
+
+/* SUMMARY CARDS */
+
+.box{
+
+    transition:0.4s;
+
+}
+
+.box:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+/* CHART CARDS */
+
+.chart-card{
+
+    transition:0.4s;
+
+}
+
+.chart-card:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.02);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.18);
+
+}
+
+/* PIE CHART */
+
+#pieChart{
+
+    transition:0.5s;
+
+}
+
+#pieChart:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* MONTHLY CHART */
+
+#monthlyChart{
+
+    transition:0.5s;
+
+}
+
+#monthlyChart:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* BUTTON */
+
+button{
+
+    transition:0.35s;
+
+}
+
+button:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.01);
+
+}
+
+/* SIDEBAR BUTTONS */
+
+.sidebar a{
+
+    transition:0.35s;
+
+}
+
+.sidebar a:hover{
+
+    transform:
+    translateX(8px)
+    scale(1.04);
+
+}
+
+/* TABLE ROW */
+
+tr{
+
+    transition:0.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#f5f3ff;
+
+    transform:scale(1.01);
+
+}
+/* LOGIN PAGE */
+
+.login-body{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  min-height:100vh;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #1e1b4b,
+    #312e81
+  );
+
+}
+
+.login-container{
+
+  width:420px;
+
+  background:white;
+
+  padding:50px;
+
+  border-radius:35px;
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+.login-container h1{
+
+  text-align:center;
+
+  font-size:42px;
+
+  margin-bottom:35px;
+
+  color:#7c3aed;
+
+}
+
+.login-container input{
+
+  width:100%;
+
+  height:65px;
+
+  margin-bottom:20px;
+
+  border:none;
+
+  border-radius:18px;
+
+  padding-left:20px;
+
+  font-size:18px;
+
+  background:#f3f4f6;
+
+}
+
+.auth-body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1974&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* =========================
+GLASS LOGIN BOX
+========================= */
+
+.auth-box{
+
+    width:430px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+    rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,0.18);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.4);
+
+}
+
+/* =========================
+TITLE
+========================= */
+
+.auth-box h1{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:52px;
+
+    margin-bottom:35px;
+
+    font-weight:800;
+
+}
+
+/* =========================
+INPUTS
+========================= */
+
+.auth-box input{
+
+    width:100%;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding-left:20px;
+
+    margin-bottom:22px;
+
+    background:
+    rgba(240,245,255,0.92);
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.auth-box button{
+
+    width:100%;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #7c3aed,
+        #9333ea
+    );
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.auth-box button:hover{
+
+    transform:
+    scale(1.03);
+
+    box-shadow:
+    0 10px 25px rgba(147,51,234,0.5);
+
+}
+
+/* =========================
+REGISTER TEXT
+========================= */
+
+.register-text{
+
+    text-align:center;
+
+    margin-top:22px;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.register-text a{
+
+    color:#d8b4fe;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
